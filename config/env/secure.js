@@ -6,7 +6,7 @@ module.exports = {
 	assets: {
 		lib: {
 			css: [
-				'public/lib/bootswatch/united/bootstrap.min.css'],
+				'public/lib/bootswatch/cosmo/bootstrap.min.css'],
 			js: [
 				'public/lib/angular/angular.min.js',
 				'public/lib/angular-resource/angular-resource.min.js',
