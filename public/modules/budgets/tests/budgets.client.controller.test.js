@@ -53,7 +53,8 @@
 		it('$scope.find() should create an array with at least one Budget object fetched from XHR', inject(function(Budgets) {
 			// Create sample Budget using the Budgets service
 			var sampleBudget = new Budgets({
-				name: 'New Budget'
+				name: 'New Budget',
+				amount: 'New Amount'
 			});
 
 			// Create a sample Budgets array that includes the new Budget
@@ -73,7 +74,8 @@
 		it('$scope.findOne() should create an array with one Budget object fetched from XHR using a budgetId URL parameter', inject(function(Budgets) {
 			// Define a sample Budget object
 			var sampleBudget = new Budgets({
-				name: 'New Budget'
+				name: 'New Budget',
+				amount: 'New Amount'
 			});
 
 			// Set the URL parameter
@@ -93,17 +95,20 @@
 		it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Budgets) {
 			// Create a sample Budget object
 			var sampleBudgetPostData = new Budgets({
-				name: 'New Budget'
+				name: 'New Budget',
+				amount: 'New Amount'
 			});
 
 			// Create a sample Budget response
 			var sampleBudgetResponse = new Budgets({
 				_id: '525cf20451979dea2c000001',
-				name: 'New Budget'
+				name: 'New Budget',
+				amount: 'New Amount'
 			});
 
 			// Fixture mock form input values
 			scope.name = 'New Budget';
+			scope.expenditure = 'New Expenditure';
 
 			// Set POST response
 			$httpBackend.expectPOST('budgets', sampleBudgetPostData).respond(sampleBudgetResponse);
@@ -123,7 +128,8 @@
 			// Define a sample Budget put data
 			var sampleBudgetPutData = new Budgets({
 				_id: '525cf20451979dea2c000001',
-				name: 'New Budget'
+				name: 'New Budget',
+				amount: 'New Amount'
 			});
 
 			// Mock Budget in scope

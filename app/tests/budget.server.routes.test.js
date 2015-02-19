@@ -38,7 +38,9 @@ describe('Budget CRUD tests', function() {
 		// Save a user to the test db and create new Budget
 		user.save(function() {
 			budget = {
-				name: 'Budget Name'
+				name: 'Budget Name',
+				amount: 'Amount Name'
+
 			};
 
 			done();

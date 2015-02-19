@@ -30,6 +30,7 @@ describe('Expense Model Unit Tests:', function() {
 		user.save(function() { 
 			expense = new Expense({
 				name: 'Expense Name',
+				expenditure: 'Expenditure Name',
 				user: user
 			});
 

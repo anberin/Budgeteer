@@ -53,7 +53,8 @@
 		it('$scope.find() should create an array with at least one Expense object fetched from XHR', inject(function(Expenses) {
 			// Create sample Expense using the Expenses service
 			var sampleExpense = new Expenses({
-				name: 'New Expense'
+				name: 'New Expense',
+				expenditure:'New Expenditure'
 			});
 
 			// Create a sample Expenses array that includes the new Expense
@@ -73,7 +74,8 @@
 		it('$scope.findOne() should create an array with one Expense object fetched from XHR using a expenseId URL parameter', inject(function(Expenses) {
 			// Define a sample Expense object
 			var sampleExpense = new Expenses({
-				name: 'New Expense'
+				name: 'New Expense',
+				expenditure: 'New Expenditure'
 			});
 
 			// Set the URL parameter
@@ -93,17 +95,20 @@
 		it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Expenses) {
 			// Create a sample Expense object
 			var sampleExpensePostData = new Expenses({
-				name: 'New Expense'
+				name: 'New Expense',
+				expenditure: 'New Expenditure'
 			});
 
 			// Create a sample Expense response
 			var sampleExpenseResponse = new Expenses({
 				_id: '525cf20451979dea2c000001',
-				name: 'New Expense'
+				name: 'New Expense',
+				expenditure: 'New Expenditure'
 			});
 
 			// Fixture mock form input values
 			scope.name = 'New Expense';
+			scope.expenditure = 'New Expenditure';
 
 			// Set POST response
 			$httpBackend.expectPOST('expenses', sampleExpensePostData).respond(sampleExpenseResponse);
@@ -114,6 +119,7 @@
 
 			// Test form inputs are reset
 			expect(scope.name).toEqual('');
+			expect(scope.expenditure).toEqual('');
 
 			// Test URL redirection after the Expense was created
 			expect($location.path()).toBe('/expenses/' + sampleExpenseResponse._id);
@@ -123,7 +129,8 @@
 			// Define a sample Expense put data
 			var sampleExpensePutData = new Expenses({
 				_id: '525cf20451979dea2c000001',
-				name: 'New Expense'
+				name: 'New Expense',
+				expenditure: 'New Expenditure'
 			});
 
 			// Mock Expense in scope

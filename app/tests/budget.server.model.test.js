@@ -30,6 +30,7 @@ describe('Budget Model Unit Tests:', function() {
 		user.save(function() { 
 			budget = new Budget({
 				name: 'Budget Name',
+				amount: 'Amount Name',
 				user: user
 			});
 

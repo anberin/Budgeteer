@@ -38,7 +38,8 @@ describe('Expense CRUD tests', function() {
 		// Save a user to the test db and create new Expense
 		user.save(function() {
 			expense = {
-				name: 'Expense Name'
+				name: 'Expense Name',
+				expenditure: 'Expenditure Name'
 			};
 
 			done();
