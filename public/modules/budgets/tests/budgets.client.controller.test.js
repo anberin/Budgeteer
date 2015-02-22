@@ -108,7 +108,7 @@
 
 			// Fixture mock form input values
 			scope.name = 'New Budget';
-			scope.expenditure = 'New Expenditure';
+			scope.amount = 'New Amount';
 
 			// Set POST response
 			$httpBackend.expectPOST('budgets', sampleBudgetPostData).respond(sampleBudgetResponse);
