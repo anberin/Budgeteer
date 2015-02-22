@@ -119,6 +119,7 @@
 
 			// Test form inputs are reset
 			expect(scope.name).toEqual('');
+			expect(scope.amount).toEqual('');
 
 			// Test URL redirection after the Budget was created
 			expect($location.path()).toBe('/budgets/' + sampleBudgetResponse._id);
