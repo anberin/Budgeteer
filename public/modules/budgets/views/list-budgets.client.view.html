@@ -1,4 +1,5 @@
 <section data-ng-controller="BudgetsController" data-ng-init="find()">
+    <section class="container">
     <div class="page-header">
         <h1>Budgets</h1>
     </div>
@@ -17,4 +18,5 @@
     <div class="alert alert-warning text-center" data-ng-hide="!budgets.$resolved || budgets.length">
     	No Budgets yet, why don't you <a href="/#!/budgets/create">create one</a>?
     </div>
+        </section>
 </section>
