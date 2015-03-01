@@ -19,7 +19,7 @@ angular.module('budgets').controller('BudgetsController', ['$scope', '$statePara
 
 				// Clear form fields
 				$scope.name = '';
-				$scope.amount = '';
+				$scope.amount = 10;
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

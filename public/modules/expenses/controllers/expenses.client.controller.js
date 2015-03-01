@@ -19,7 +19,7 @@ angular.module('expenses').controller('ExpensesController', ['$scope', '$statePa
 
 				// Clear form fields
 				$scope.name = '';
-				$scope.expenditure = '';
+				$scope.expenditure = 10;
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

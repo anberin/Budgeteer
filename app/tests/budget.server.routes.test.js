@@ -39,7 +39,7 @@ describe('Budget CRUD tests', function() {
 		user.save(function() {
 			budget = {
 				name: 'Budget Name',
-				amount: 'Amount Name'
+				amount: 10
 
 			};
 

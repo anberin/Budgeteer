@@ -54,7 +54,7 @@
 			// Create sample Expense using the Expenses service
 			var sampleExpense = new Expenses({
 				name: 'New Expense',
-				expenditure:'New Expenditure'
+				expenditure:10
 			});
 
 			// Create a sample Expenses array that includes the new Expense
@@ -75,7 +75,7 @@
 			// Define a sample Expense object
 			var sampleExpense = new Expenses({
 				name: 'New Expense',
-				expenditure: 'New Expenditure'
+				expenditure: 10
 			});
 
 			// Set the URL parameter
@@ -96,19 +96,19 @@
 			// Create a sample Expense object
 			var sampleExpensePostData = new Expenses({
 				name: 'New Expense',
-				expenditure: 'New Expenditure'
+				expenditure: 10
 			});
 
 			// Create a sample Expense response
 			var sampleExpenseResponse = new Expenses({
 				_id: '525cf20451979dea2c000001',
 				name: 'New Expense',
-				expenditure: 'New Expenditure'
+				expenditure: 10
 			});
 
 			// Fixture mock form input values
 			scope.name = 'New Expense';
-			scope.expenditure = 'New Expenditure';
+			scope.expenditure = 10;
 
 			// Set POST response
 			$httpBackend.expectPOST('expenses', sampleExpensePostData).respond(sampleExpenseResponse);
@@ -119,7 +119,7 @@
 
 			// Test form inputs are reset
 			expect(scope.name).toEqual('');
-			expect(scope.expenditure).toEqual('');
+			expect(scope.expenditure).toEqual(10);
 
 			// Test URL redirection after the Expense was created
 			expect($location.path()).toBe('/expenses/' + sampleExpenseResponse._id);
@@ -130,7 +130,7 @@
 			var sampleExpensePutData = new Expenses({
 				_id: '525cf20451979dea2c000001',
 				name: 'New Expense',
-				expenditure: 'New Expenditure'
+				expenditure: 10
 			});
 
 			// Mock Expense in scope

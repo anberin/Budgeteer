@@ -54,7 +54,7 @@
 			// Create sample Budget using the Budgets service
 			var sampleBudget = new Budgets({
 				name: 'New Budget',
-				amount: 'New Amount'
+				amount: 10
 			});
 
 			// Create a sample Budgets array that includes the new Budget
@@ -75,7 +75,7 @@
 			// Define a sample Budget object
 			var sampleBudget = new Budgets({
 				name: 'New Budget',
-				amount: 'New Amount'
+				amount: 10
 			});
 
 			// Set the URL parameter
@@ -96,19 +96,19 @@
 			// Create a sample Budget object
 			var sampleBudgetPostData = new Budgets({
 				name: 'New Budget',
-				amount: 'New Amount'
+				amount: 10
 			});
 
 			// Create a sample Budget response
 			var sampleBudgetResponse = new Budgets({
 				_id: '525cf20451979dea2c000001',
 				name: 'New Budget',
-				amount: 'New Amount'
+				amount: 10
 			});
 
 			// Fixture mock form input values
 			scope.name = 'New Budget';
-			scope.amount = 'New Amount';
+			scope.amount = 10;
 
 			// Set POST response
 			$httpBackend.expectPOST('budgets', sampleBudgetPostData).respond(sampleBudgetResponse);
@@ -119,7 +119,7 @@
 
 			// Test form inputs are reset
 			expect(scope.name).toEqual('');
-			expect(scope.amount).toEqual('');
+			expect(scope.amount).toEqual(10);
 
 			// Test URL redirection after the Budget was created
 			expect($location.path()).toBe('/budgets/' + sampleBudgetResponse._id);
@@ -130,7 +130,7 @@
 			var sampleBudgetPutData = new Budgets({
 				_id: '525cf20451979dea2c000001',
 				name: 'New Budget',
-				amount: 'New Amount'
+				amount: 10
 			});
 
 			// Mock Budget in scope

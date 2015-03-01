@@ -17,8 +17,8 @@ var BudgetSchema = new Schema({
 		trim: true
 	},
 	amount: {
-		type: String,
-		default: '',
+		type: Number,
+		default: 10,
 		required: 'Please fill Budget name',
 		trim: true
 	},

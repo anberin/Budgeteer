@@ -17,8 +17,8 @@ var ExpenseSchema = new Schema({
 		trim: true
 	},
 	expenditure: {
-		type:String,
-		default:'',
+		type: Number,
+		default:10,
 		required: 'What is the expenditure?',
 		trim: true
 	},
