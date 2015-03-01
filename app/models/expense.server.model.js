@@ -13,15 +13,20 @@ var ExpenseSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill Expense name',
+		required: 'Please fill expense name',
 		trim: true
 	},
 	expenditure: {
 		type: Number,
 		default:10,
-		required: 'What is the expenditure?',
+		required: 'Please fill expenditure amount',
 		trim: true
 	},
+    expenseinfo: {
+        type: String,
+        default: '',
+        trim: true
+    },
 	created: {
 		type: Date,
 		default: Date.now

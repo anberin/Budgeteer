@@ -10,7 +10,8 @@ angular.module('expenses').controller('ExpensesController', ['$scope', '$statePa
 			// Create new Expense object
 			var expense = new Expenses ({
 				name: this.name,
-				expenditure: this.expenditure
+				expenditure: this.expenditure,
+                expenseinfo: this.expenseinfo
 			});
 
 			// Redirect after save
@@ -19,7 +20,8 @@ angular.module('expenses').controller('ExpensesController', ['$scope', '$statePa
 
 				// Clear form fields
 				$scope.name = '';
-				$scope.expenditure = 10;
+				$scope.expenditure = 10
+                $scope.expenseinfo = 'Expense Info'
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

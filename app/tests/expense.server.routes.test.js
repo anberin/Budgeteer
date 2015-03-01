@@ -39,7 +39,8 @@ describe('Expense CRUD tests', function() {
 		user.save(function() {
 			expense = {
 				name: 'Expense Name',
-				expenditure: 10
+				expenditure: 10,
+                expenseinfo: 'Expense Info'
 			};
 
 			done();

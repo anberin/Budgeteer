@@ -31,6 +31,7 @@ describe('Expense Model Unit Tests:', function() {
 			expense = new Expense({
 				name: 'Expense Name',
 				expenditure: 10,
+                expenseinfo: 'Expense Info',
 				user: user
 			});
 
