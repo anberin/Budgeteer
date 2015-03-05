@@ -13,15 +13,20 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label" for="expenditure">Expenditure</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="expense.expenditure" id="expenditure" class="form-control" placeholder="e.g.,100,2000,30000,400000" required>
+                    <label class="control-label" for="expenditure">What is your expenditure?</label>
+                    <div class="input-group" class="controls">
+                        <span class="input-group-addon">$</span>
+                        <input type="number" data-ng-model="expense.expenditure" id="expenditure" class="form-control" placeholder="e.g.,100,2000,30000,400000" required>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="budget">Budget</label>
+                    <select class="form-control" id="budget" ng-model="expense.budget" ng-options="budget.name for budget in budgets"></select>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="expenseinfo">Expense Info</label>
                     <div class="controls">
-                        <textarea name="expenseinfo" data-ng-model="expenseinfo" id="expenseinfo" class="form-control" cols="30" rows="10" placeholder="Expense Info"></textarea>
+                        <textarea name="expenseinfo" data-ng-model="expense.expenseinfo" id="expenseinfo" class="form-control" cols="30" rows="10" placeholder="Expense Info"></textarea>
                     </div>
                 </div>
                 <div class="form-group">

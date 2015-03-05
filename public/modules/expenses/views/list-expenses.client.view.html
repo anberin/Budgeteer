@@ -12,7 +12,7 @@
 				<span data-ng-bind="expense.user.displayName"></span>
 			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="expense.name"></h4>
-            <p class="list-group-item-text" data-ng-bind="expense.expenditure"></p>
+            <p class="list-group-item-number" data-ng-bind="expense.expenditure"></p>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!expenses.$resolved || expenses.length">

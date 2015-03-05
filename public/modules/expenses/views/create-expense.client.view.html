@@ -14,9 +14,14 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="expenditure">What is your expenditure?</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="expenditure" id="expenditure" class="form-control" placeholder="e.g.,100,2000,30000,400000" required>
+                    <div class="input-group" class="controls">
+                          <span class="input-group-addon">$</span>
+                         <input type="number" data-ng-model="expenditure" id="expenditure" class="form-control" placeholder="e.g.,100,2000,30000,400000" required>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="budget">Budget</label>
+                    <select class="form-control" id="budget" ng-model="budget" ng-options="budget.name for budget in budgets"></select>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="expenseinfo">Expense Info</label>

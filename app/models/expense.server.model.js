@@ -13,7 +13,7 @@ var ExpenseSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill expense name',
+		required: 'Please fill Expense name',
 		trim: true
 	},
 	expenditure: {
@@ -34,7 +34,12 @@ var ExpenseSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	}
+	},
+    budget: {
+        type: Schema.ObjectId,
+        ref:'Budget'
+
+    }
 });
 
 mongoose.model('Expense', ExpenseSchema);

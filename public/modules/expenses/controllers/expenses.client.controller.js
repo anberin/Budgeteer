@@ -1,9 +1,12 @@
 'use strict';
 
 // Expenses controller
-angular.module('expenses').controller('ExpensesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Expenses',
-	function($scope, $stateParams, $location, Authentication, Expenses) {
+angular.module('expenses').controller('ExpensesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Expenses','Budgets',
+	function($scope, $stateParams, $location, Authentication, Expenses, Budgets) {
 		$scope.authentication = Authentication;
+
+        $scope.budgets = Budgets.query();
+        $scope.budget = $scope.budgets[0];
 
 		// Create new Expense
 		$scope.create = function() {
@@ -20,8 +23,8 @@ angular.module('expenses').controller('ExpensesController', ['$scope', '$statePa
 
 				// Clear form fields
 				$scope.name = '';
-				$scope.expenditure = 10
-                $scope.expenseinfo = 'Expense Info'
+				$scope.expenditure = 10;
+                $scope.expenseinfo = 'Expense Info';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
